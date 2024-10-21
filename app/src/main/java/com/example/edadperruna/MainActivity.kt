@@ -24,10 +24,17 @@ class MainActivity : AppCompatActivity() {
         val calculate = findViewById<Button>(R.id.calculatorButton)
         val result = findViewById<TextView>(R.id.resultText)
 
-        calculate.setOnClickListener(){
-            var age = editAge.text.toString().toInt()
-            var resultAge = age * 7
-            result.text = "Su edad en años perro es: $resultAge años"
-        }
+            calculate.setOnClickListener(){
+                try {
+                    var age = editAge.text.toString().toInt()
+                    var resultAge = age * 7
+                    result.text = "Su edad en años perro es: $resultAge años"
+                }catch (ex : Exception){
+                    
+                }
+
+            }
+
+
     }
 }
